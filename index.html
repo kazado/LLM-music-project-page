@@ -43,6 +43,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src='http://www.midijs.net/lib/midi.js'></script>
 </head>
 <body>
 
@@ -255,10 +256,60 @@
 </section>
 <!-- End video carousel -->
 
-
-
-
-
+<!-- Section with a table of audio elements, with row and column labels -->
+<section class="section">
+  <div class="container">
+    <h2 class="title">Audio Samples</h2>
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Row 1</th>
+          <td>
+            <button onclick="MIDIjs.play('/Users/coreyzhang/Downloads/generated_music.mid')">Play Sample 1</button>
+          </td>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample2.mid')">Play Sample 2</button>
+          </td>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample3.mid')">Play Sample 3</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Row 2</th>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample4.mid')">Play Sample 4</button>
+          </td>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample5.mid')">Play Sample 5</button>
+          </td>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample6.mid')">Play Sample 6</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Row 3</th>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample7.mid')">Play Sample 7</button>
+          </td>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample8.mid')">Play Sample 8</button>
+          </td>
+          <td>
+            <button onclick="MIDIjs.play('audio/sample9.mid')">Play Sample 9</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
@@ -266,7 +317,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="/Users/coreyzhang/Downloads/Leveraging LLMs for Automated Music Generation Project Poster.pdf" width="100%" height="550">
+      <iframe  src="/Users/coreyzhang/Documents/LLM Music/Leveraging LLMs for Automated Music Generation Project Poster.pdf" width="100%" height="550">
           </iframe>
         
       </div>
