@@ -44,7 +44,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
-  <script src='http://www.midijs.net/lib/midi.js'></script>
+  <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
 </head>
 <body>
 
@@ -260,7 +260,7 @@
 <!-- Section with a table of audio elements, with row and column labels -->
 <section class="section">
   <div class="container">
-    <h2 class="title">Audio Samples</h2>
+    <h2 class="title">Generated Audio Samples</h2>
     <table class="table is-fullwidth">
       <thead>
         <tr>
@@ -271,44 +271,71 @@
         </tr>
       </thead>
       <tbody>
+        <div class="midi-container">
+          <div class="label">MIDI Visualizer</div>
+          <midi-visualizer type="piano-roll" id="myVisualizer"></midi-visualizer>
+        </div>
         <tr>
           <th>Prompt 1: Generate MIDI scores in JSON notation that can be played back by Tone.js</th>
           <td>
             <midi-player
-  src="midi/generated_music.mid"
+  src="https://kazado.github.io/LLM-music-project-page/midi/direct_1.mid"
   sound-font visualizer="#myVisualizer">
 </midi-player>
-<midi-visualizer type="piano-roll" id="myVisualizer"></midi-visualizer>
           </td>
           <td>
-            <button onclick="MIDIjs.play('audio/sample2.mid')">Play Sample 2</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/code_1.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
           <td>
-            <button onclick="MIDIjs.play('audio/sample3.mid')">Play Sample 3</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/richcode_1.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
         </tr>
         <tr>
           <th>Prompt 2: Generate a MIDI JSON Bach chorale adhering counterpoint rules with four voices following a chord progression and counterpoint harmony rules</th>
           <td>
-            <button onclick="MIDIjs.play('audio/sample4.mid')">Play Sample 4</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/direct_2.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
           <td>
-            <button onclick="MIDIjs.play('audio/sample5.mid')">Play Sample 5</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/code_2.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
           <td>
-            <button onclick="MIDIjs.play('audio/sample6.mid')">Play Sample 6</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/richcode_2.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
         </tr>
         <tr>
           <th>Prompt 3: Generate a MIDI JSON complex piano piece with two hands with syncopated rhythms and varied notes</th>
           <td>
-            <button onclick="MIDIjs.play('audio/sample7.mid')">Play Sample 7</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/direct_3.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
           <td>
-            <button onclick="MIDIjs.play('audio/sample8.mid')">Play Sample 8</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/code_3.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
           <td>
-            <button onclick="MIDIjs.play('audio/sample9.mid')">Play Sample 9</button>
+            <midi-player
+  src="https://kazado.github.io/LLM-music-project-page/midi/richcode_3.mid"
+  sound-font visualizer="#myVisualizer">
+</midi-player>
           </td>
         </tr>
       </tbody>
